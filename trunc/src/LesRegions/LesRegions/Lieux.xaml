@@ -1,0 +1,134 @@
+﻿<Window x:Class="LesRegions.Lieux"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LesRegions" xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        WindowState="Maximized"
+        WindowStyle="None"
+        WindowStartupLocation="CenterScreen"
+        mc:Ignorable="d"
+        Title="region" Height="450" Width="800">
+    <DockPanel>
+        <Grid DockPanel.Dock="Top" Background="{StaticResource defaultColor}" VerticalAlignment="Top">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="1*"/>
+
+            </Grid.ColumnDefinitions>
+            <Button MinWidth="40" MinHeight="25"  Grid.Column="0" Margin="20,20,0,20"
+                    materialDesign:ShadowAssist.ShadowDepth="Depth2"
+                    materialDesign:ButtonProgressAssist.Value="-1"
+                    materialDesign:ButtonProgressAssist.IsIndicatorVisible="true"
+                    materialDesign:ButtonProgressAssist.IsIndeterminate="True"
+                    Click="BackButton_Click">
+                <Button.Content>
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="images/Autre/Retour.png" Width="40" Height="25"/>
+                        <TextBlock Text="Retour" VerticalAlignment="Center"/>
+                    </StackPanel>
+                </Button.Content>
+            </Button>
+            <Viewbox  Grid.Column="1" Margin="0,0,60,0" Height="63" Width="180" Grid.ColumnSpan="2">
+                <materialDesign:Card materialDesign:ShadowAssist.ShadowDepth="Depth5" materialDesign:ShadowAssist.ShadowEdges="Bottom,Right" Padding="5">
+                    <Image Source="{Binding Region.Logo}"/>
+                </materialDesign:Card>
+            </Viewbox>
+            <TextBlock Text="{Binding Nom}" FontSize="32" Height="55"  FontWeight="DemiBold"  Margin="-50,15,0,0" Grid.Column="3"
+                       Grid.ColumnSpan="2"/>
+        </Grid>
+        <Grid DockPanel.Dock="Bottom" Background="{StaticResource defaultColor}">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <StackPanel Grid.Column="0"/>
+            <Button Content="Contact" MinWidth="60"  MinHeight="30" Grid.Column="1" Margin="0,10,20,10"
+                    materialDesign:ShadowAssist.ShadowDepth="Depth2"
+                    materialDesign:ButtonProgressAssist.Value="-1"
+                    materialDesign:ButtonProgressAssist.IsIndicatorVisible="true"
+                    materialDesign:ButtonProgressAssist.IsIndeterminate="True"
+                    Click="ContactButton_Click"/>
+        </Grid>
+        <Grid Background="White">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Border Grid.ColumnSpan="2" Style="{StaticResource BorderDefault}">
+                <ScrollViewer>
+                    <TextBlock TextWrapping="Wrap" Text="{Binding Description}" Style="{StaticResource MaterialDesignHeadline5TextBlock}" Padding="15"/>
+                </ScrollViewer>
+            </Border>
+            <Viewbox Grid.Column="2" Margin="0,5">
+                <materialDesign:Card materialDesign:ShadowAssist.ShadowDepth="Depth5" materialDesign:ShadowAssist.ShadowEdges="Bottom,Right" Padding="5">
+                    <Image Source="{Binding Image1}"/>
+                </materialDesign:Card>
+            </Viewbox>
+            <Viewbox Grid.Column="3" Margin="0,5">
+                <materialDesign:Card materialDesign:ShadowAssist.ShadowDepth="Depth5" materialDesign:ShadowAssist.ShadowEdges="Bottom,Right" Padding="5">
+                    <Image Source="{Binding Map}"/>
+                </materialDesign:Card>
+            </Viewbox>
+            <Border Grid.Row="1" Style="{StaticResource BorderDefault}">
+                <DockPanel>
+                    <materialDesign:Card DockPanel.Dock="Top" Margin="5" Padding="4" Background="{DynamicResource PrimaryHueDarkBrush}" Foreground="{DynamicResource PrimaryHueDarkForegroundBrush}" UniformCornerRadius="6">
+                        <TextBlock TextWrapping="Wrap" Text="Activités" TextAlignment="Center"/>
+                    </materialDesign:Card>
+                    <ScrollViewer>
+                        <ListBox Margin="5" ScrollViewer.HorizontalScrollBarVisibility="Disabled" ItemsSource="{Binding Activites}">
+                            <ListBox.ItemTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding Nom}" FontSize="20"/>
+                                </DataTemplate>
+                            </ListBox.ItemTemplate>
+                        </ListBox>
+                    </ScrollViewer>
+                </DockPanel>
+            </Border>
+            <Viewbox Grid.Column="1" Grid.Row="1">
+                <materialDesign:Card materialDesign:ShadowAssist.ShadowDepth="Depth5" materialDesign:ShadowAssist.ShadowEdges="Bottom,Right" Padding="5">
+                    <Image Source="{Binding Image2}"/>
+                </materialDesign:Card>
+            </Viewbox>
+            <Border Grid.Column="2" Grid.ColumnSpan="3" Grid.Row="1" Style="{StaticResource BorderDefault}">
+                <DockPanel>
+                    <materialDesign:Card DockPanel.Dock="Top" Margin="5" Padding="4" Background="{DynamicResource PrimaryHueDarkBrush}" Foreground="{DynamicResource PrimaryHueDarkForegroundBrush}" UniformCornerRadius="6">
+                        <TextBlock TextWrapping="Wrap" Text="Avis sur le lieu" TextAlignment="Center"/>
+                    </materialDesign:Card>
+                    <Button DockPanel.Dock="Bottom" Content="+" HorizontalAlignment="Left" VerticalAlignment="Bottom" MinHeight="20" MinWidth="30" Margin="5,0,0,5"
+                            materialDesign:ShadowAssist.ShadowDepth="Depth2"
+                            materialDesign:ButtonProgressAssist.Value="-1"
+                            materialDesign:ButtonProgressAssist.IsIndicatorVisible="true"
+                            materialDesign:ButtonProgressAssist.IsIndeterminate="True" Cursor="Hand" Click="AddButton_Click"/>
+                    <ScrollViewer>
+                        <ListBox ScrollViewer.HorizontalScrollBarVisibility="Disabled" ItemsSource="{Binding Avis}">
+                            <ListBox.ItemTemplate>
+                                <DataTemplate>
+                                    <StackPanel>
+                                        <WrapPanel>
+                                            <TextBlock Text="{Binding Utilisateur.Nom}" Margin="5,0" FontSize="15"/>
+                                            <TextBlock Text="{Binding Utilisateur.Prenom}" FontSize="15"/>
+                                        </WrapPanel>
+                                        <materialDesign:Card DockPanel.Dock="Top" Margin="5" Padding="4" Background="{DynamicResource PrimaryHueDarkBrush}" Foreground="{DynamicResource PrimaryHueDarkForegroundBrush}" UniformCornerRadius="6">
+                                            <TextBlock TextWrapping="Wrap" Text="{Binding Contenu}" FontSize="15"/>
+                                        </materialDesign:Card>
+                                    </StackPanel>
+                                </DataTemplate>
+                            </ListBox.ItemTemplate>
+                        </ListBox>
+                    </ScrollViewer>
+                </DockPanel>
+            </Border>
+        </Grid>
+    </DockPanel>
+</Window>

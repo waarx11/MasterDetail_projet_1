@@ -1,0 +1,1823 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <OutputPath>C:\Users\adrie\SVNtortoise\trunc\src\LesRegions\LesRegionsBin\</OutputPath>
+    <PlatformTarget>x86</PlatformTarget>
+    <WarningLevel>5</WarningLevel>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="images\Autre\account-plus.png" />
+    <None Remove="images\Autre\CarteFrance.PNG" />
+    <None Remove="images\Autre\croix.png" />
+    <None Remove="images\Autre\logo-france.png" />
+    <None Remove="images\Autre\Menu.png" />
+    <None Remove="images\Autre\modifier.png" />
+    <None Remove="images\Autre\moins.png" />
+    <None Remove="images\Autre\Paramètre.png" />
+    <None Remove="images\Autre\photo-de-profil.png" />
+    <None Remove="images\Autre\plus.png" />
+    <None Remove="images\Autre\power.png" />
+    <None Remove="images\Autre\Retour.png" />
+    <None Remove="images\Autre\valide.png" />
+    <None Remove="images\Auvergne-Rhone-Alpe\auvergne-rhone-alpes-region-departements.jpg" />
+    <None Remove="images\Auvergne-Rhone-Alpe\Auvergne-Rhone-Alpes.jpg" />
+    <None Remove="images\Auvergne-Rhone-Alpe\Lieux\Le_pal1.jpg" />
+    <None Remove="images\Auvergne-Rhone-Alpe\Lieux\Le_pal2.jpg" />
+    <None Remove="images\Auvergne-Rhone-Alpe\Lieux\Le_pal3.png" />
+    <None Remove="images\Auvergne-Rhone-Alpe\Lieux\Panoramique_des_Domes1.jpg" />
+    <None Remove="images\Auvergne-Rhone-Alpe\Lieux\Panoramique_des_Domes2.jpg" />
+    <None Remove="images\Auvergne-Rhone-Alpe\Lieux\Panoramique_des_Domes3.png" />
+    <None Remove="images\Auvergne-Rhone-Alpe\Lieux\vieux-lyon-map.jfif" />
+    <None Remove="images\Auvergne-Rhone-Alpe\Lieux\vieux-lyon.jpg" />
+    <None Remove="images\Auvergne-Rhone-Alpe\Lieux\vieux-lyon2.jpg" />
+    <None Remove="images\Auvergne-Rhone-Alpe\Objets\briquet.jpg" />
+    <None Remove="images\Auvergne-Rhone-Alpe\Objets\briquet2.jpg" />
+    <None Remove="images\Auvergne-Rhone-Alpe\Objets\Couteaux.jpg" />
+    <None Remove="images\Auvergne-Rhone-Alpe\Objets\Couteaux2.jpg" />
+    <None Remove="images\Auvergne-Rhone-Alpe\Objets\mamie-mesure.jpg" />
+    <None Remove="images\Auvergne-Rhone-Alpe\Objets\mamie-mesure2.jpg" />
+    <None Remove="images\Auvergne-Rhone-Alpe\specialite\cuisses-de-grenouille1.jpg" />
+    <None Remove="images\Auvergne-Rhone-Alpe\specialite\cuisses-de-grenouilles.jpg" />
+    <None Remove="images\Auvergne-Rhone-Alpe\specialite\poulet-de-bresse.jpg" />
+    <None Remove="images\Auvergne-Rhone-Alpe\specialite\poulet.jpg" />
+    <None Remove="images\Auvergne-Rhone-Alpe\specialite\raviole.jpg" />
+    <None Remove="images\Auvergne-Rhone-Alpe\specialite\raviole2.jpeg" />
+    <None Remove="images\Bourgogne-franche-compte\Bourgogne-franche-compte-departement.png" />
+    <None Remove="images\Bourgogne-franche-compte\Bourgogne-franche-compte.jpg" />
+    <None Remove="images\Bourgogne-franche-compte\Lieux\Noyers-sur-Serein1.jpg" />
+    <None Remove="images\Bourgogne-franche-compte\Lieux\Noyers-sur-Serein2.jpg" />
+    <None Remove="images\Bourgogne-franche-compte\Lieux\Noyers-sur-Serein3.png" />
+    <None Remove="images\Bourgogne-franche-compte\Lieux\Semur-en-Brionnais1.jpg" />
+    <None Remove="images\Bourgogne-franche-compte\Lieux\Semur-en-Brionnais2.jpg" />
+    <None Remove="images\Bourgogne-franche-compte\Lieux\Semur-en-Brionnais3.png" />
+    <None Remove="images\Bourgogne-franche-compte\Lieux\Vezelay1.jpg" />
+    <None Remove="images\Bourgogne-franche-compte\Lieux\Vezelay2.jpg" />
+    <None Remove="images\Bourgogne-franche-compte\Lieux\Vezelay3.png" />
+    <None Remove="images\Bourgogne-franche-compte\Objets\Horlogerie_1.jpg" />
+    <None Remove="images\Bourgogne-franche-compte\Objets\Horlogerie_2.jpg" />
+    <None Remove="images\Bourgogne-franche-compte\Objets\La_pipe.jpg" />
+    <None Remove="images\Bourgogne-franche-compte\Objets\La_pipe2.jpg" />
+    <None Remove="images\Bourgogne-franche-compte\Objets\Savons_Bourgogne 1.jpg" />
+    <None Remove="images\Bourgogne-franche-compte\Objets\Savons_Bourgogne 2.jpg" />
+    <None Remove="images\Bourgogne-franche-compte\Specialite\andouillette-chablis.jpg" />
+    <None Remove="images\Bourgogne-franche-compte\Specialite\au-bon-laboureur.jpg" />
+    <None Remove="images\Bourgogne-franche-compte\Specialite\escargot.jpg" />
+    <None Remove="images\Bourgogne-franche-compte\Specialite\escargot1.jpg" />
+    <None Remove="images\Bourgogne-franche-compte\Specialite\Poularde_aux_morilles_002.jpg" />
+    <None Remove="images\Bourgogne-franche-compte\Specialite\poulet-aux-morilles-georges-blanc.jpeg" />
+    <None Remove="images\Bretagne\bretagne-departements.jpg" />
+    <None Remove="images\Bretagne\bretagne.jpg" />
+    <None Remove="images\Bretagne\Lieux\GRANIT_ROSE1.jpg" />
+    <None Remove="images\Bretagne\Lieux\GRANIT_ROSE2.jpg" />
+    <None Remove="images\Bretagne\Lieux\GRANIT_ROSE3.jpg" />
+    <None Remove="images\Bretagne\Lieux\LA_POINTE_SAINT-MATHIEU1.jpg" />
+    <None Remove="images\Bretagne\Lieux\LA_POINTE_SAINT-MATHIEU2.jpg" />
+    <None Remove="images\Bretagne\Lieux\LA_POINTE_SAINT-MATHIEU3.jpg" />
+    <None Remove="images\Bretagne\Lieux\SAINT-MALO1.jpg" />
+    <None Remove="images\Bretagne\Lieux\SAINT-MALO2.jpg" />
+    <None Remove="images\Bretagne\Lieux\SAINT-MALO3.jpg" />
+    <None Remove="images\Bretagne\Objets\barzhel.jpg" />
+    <None Remove="images\Bretagne\Objets\barzhel2.jpg" />
+    <None Remove="images\Bretagne\Objets\Tempete de l Ouest.jpg" />
+    <None Remove="images\Bretagne\Objets\Tempete de l Ouest2.jpg" />
+    <None Remove="images\Bretagne\Objets\tipi.jpg" />
+    <None Remove="images\Bretagne\Objets\tipi2.jpg" />
+    <None Remove="images\Bretagne\Specialite\crepes.jpeg" />
+    <None Remove="images\Bretagne\Specialite\crepes.jpg" />
+    <None Remove="images\Bretagne\Specialite\far-breton.jpeg" />
+    <None Remove="images\Bretagne\Specialite\far-breton.jpg" />
+    <None Remove="images\Bretagne\Specialite\kouign_amann.jpg" />
+    <None Remove="images\Bretagne\Specialite\kouign_amann1.jpg" />
+    <None Remove="images\Centre-Val-de-Loire\Centre-Val-de-Loire.jpg" />
+    <None Remove="images\Centre-Val-de-Loire\centre-val-loire-departement.png" />
+    <None Remove="images\Centre-Val-de-Loire\Lieux\Azay_le_Rideau1.jpg" />
+    <None Remove="images\Centre-Val-de-Loire\Lieux\Azay_le_Rideau2.jpg" />
+    <None Remove="images\Centre-Val-de-Loire\Lieux\Azay_le_Rideau3.jpg" />
+    <None Remove="images\Centre-Val-de-Loire\Lieux\Chateaudun1.jpg" />
+    <None Remove="images\Centre-Val-de-Loire\Lieux\Chateaudun2.jpg" />
+    <None Remove="images\Centre-Val-de-Loire\Lieux\Chateaudun3.jpg" />
+    <None Remove="images\Centre-Val-de-Loire\Lieux\Maray1.jpg" />
+    <None Remove="images\Centre-Val-de-Loire\Lieux\Maray2.jpg" />
+    <None Remove="images\Centre-Val-de-Loire\Lieux\Maray3.jpg" />
+    <None Remove="images\Centre-Val-de-Loire\Objets\boutique-orleans-val-de-loire-tourisme.jpg" />
+    <None Remove="images\Centre-Val-de-Loire\Objets\boutique-orleans-val-de-loire-tourisme2.jpg" />
+    <None Remove="images\Centre-Val-de-Loire\Objets\CABANE-A-JOUETS.jpg" />
+    <None Remove="images\Centre-Val-de-Loire\Objets\CABANE-A-JOUETS.png" />
+    <None Remove="images\Centre-Val-de-Loire\Objets\librairie.jpg" />
+    <None Remove="images\Centre-Val-de-Loire\Objets\librarie.png" />
+    <None Remove="images\Centre-Val-de-Loire\Specialite\pithiviers.jpeg" />
+    <None Remove="images\Centre-Val-de-Loire\Specialite\pithiviers.jpg" />
+    <None Remove="images\Centre-Val-de-Loire\Specialite\sucre d%27orge de tours.jpg" />
+    <None Remove="images\Centre-Val-de-Loire\Specialite\sucre d%27orge de tours1.jpg" />
+    <None Remove="images\Centre-Val-de-Loire\Specialite\Tarte_tatin.jpg" />
+    <None Remove="images\Centre-Val-de-Loire\Specialite\Tarte_tatin2.jpg" />
+    <None Remove="images\Corse\corce-departement.gif" />
+    <None Remove="images\Corse\corce.jpg" />
+    <None Remove="images\Corse\Lieux\Bastia1.jpg" />
+    <None Remove="images\Corse\Lieux\Bastia2.jpg" />
+    <None Remove="images\Corse\Lieux\Bastia3.jpg" />
+    <None Remove="images\Corse\Lieux\Bonifacio1.png" />
+    <None Remove="images\Corse\Lieux\Bonifacio2.jpg" />
+    <None Remove="images\Corse\Lieux\Bonifacio3.png" />
+    <None Remove="images\Corse\Lieux\Calvi1.jpg" />
+    <None Remove="images\Corse\Lieux\Calvi2.jpg" />
+    <None Remove="images\Corse\Lieux\Calvi3.png" />
+    <None Remove="images\Corse\Objets\Corail rouge 1.jpg" />
+    <None Remove="images\Corse\Objets\Corail rouge 2.jpg" />
+    <None Remove="images\Corse\Objets\Couteaux corse 1.jpg" />
+    <None Remove="images\Corse\Objets\Couteaux corse 2.jpg" />
+    <None Remove="images\Corse\Objets\oeil-sainte-lucie 1.jpg" />
+    <None Remove="images\Corse\Objets\oeil-sainte-lucie 2.jpg" />
+    <None Remove="images\Corse\Specialite\beignetbrocciu.png" />
+    <None Remove="images\Corse\Specialite\beignets-brocciu.jpg" />
+    <None Remove="images\Corse\Specialite\fiadone.jpeg" />
+    <None Remove="images\Corse\Specialite\fiadone.jpg" />
+    <None Remove="images\Corse\Specialite\tarte-aux-herbes-corse.jpg" />
+    <None Remove="images\Corse\Specialite\tartelettes_feta_herbes_4.jpg" />
+    <None Remove="images\Grand-Est\Grand-Est-departement.png" />
+    <None Remove="images\Grand-Est\Grand-Est.jpg" />
+    <None Remove="images\Grand-Est\Lieux\Colmar1.jpg" />
+    <None Remove="images\Grand-Est\Lieux\Colmar2.jpg" />
+    <None Remove="images\Grand-Est\Lieux\Colmar3.jpg" />
+    <None Remove="images\Grand-Est\Lieux\Gerardmer1.jpg" />
+    <None Remove="images\Grand-Est\Lieux\Gerardmer2.jpg" />
+    <None Remove="images\Grand-Est\Lieux\Gerardmer3.jpg" />
+    <None Remove="images\Grand-Est\Lieux\Vins1.jpg" />
+    <None Remove="images\Grand-Est\Lieux\Vins2.jpg" />
+    <None Remove="images\Grand-Est\Lieux\Vins3.jpg" />
+    <None Remove="images\Grand-Est\Objets\1secondtemps.jpg" />
+    <None Remove="images\Grand-Est\Objets\1secondtempsjfif.png" />
+    <None Remove="images\Grand-Est\Objets\3 petit point2.jpg" />
+    <None Remove="images\Grand-Est\Objets\3 petit points.jpg" />
+    <None Remove="images\Grand-Est\Objets\concept store.webp" />
+    <None Remove="images\Grand-Est\Objets\concept store2.webp" />
+    <None Remove="images\Grand-Est\Specialite\Boudin.jpg" />
+    <None Remove="images\Grand-Est\Specialite\boudin2.jpg" />
+    <None Remove="images\Grand-Est\Specialite\Bouneschlupp.jpg" />
+    <None Remove="images\Grand-Est\Specialite\bouneschlupp.png" />
+    <None Remove="images\Grand-Est\Specialite\choucroute.jpg" />
+    <None Remove="images\Grand-Est\Specialite\Choucroute.webp" />
+    <None Remove="images\guadeloupe\guadeloupe.jpg" />
+    <None Remove="images\guadeloupe\guadeloupe2.jpg" />
+    <None Remove="images\guadeloupe\Lieux\Cul-de-Sac1.jpg" />
+    <None Remove="images\guadeloupe\Lieux\Cul-de-Sac2.jpg" />
+    <None Remove="images\guadeloupe\Lieux\Cul-de-Sac3.jpg" />
+    <None Remove="images\guadeloupe\Lieux\Porte_d'Enfer1.jpg" />
+    <None Remove="images\guadeloupe\Lieux\Porte_d'Enfer2.jpg" />
+    <None Remove="images\guadeloupe\Lieux\Porte_d'Enfer3.jpg" />
+    <None Remove="images\guadeloupe\Lieux\Soufriere1.jpg" />
+    <None Remove="images\guadeloupe\Lieux\Soufriere2.jpg" />
+    <None Remove="images\guadeloupe\Lieux\Soufriere3.jpg" />
+    <None Remove="images\guadeloupe\Objets\Calebasse1.jpg" />
+    <None Remove="images\guadeloupe\Objets\Calebasse2.jpg" />
+    <None Remove="images\guadeloupe\Objets\Fleurs1.jpg" />
+    <None Remove="images\guadeloupe\Objets\Fleurs2.jpg" />
+    <None Remove="images\guadeloupe\Objets\Madras1.png" />
+    <None Remove="images\guadeloupe\Objets\Madras2.jpg" />
+    <None Remove="images\guadeloupe\Specialite\accras.jpg" />
+    <None Remove="images\guadeloupe\Specialite\Accras.webp" />
+    <None Remove="images\guadeloupe\Specialite\punch.jpg" />
+    <None Remove="images\guadeloupe\Specialite\punchs.jpg" />
+    <None Remove="images\guadeloupe\Specialite\sorbet-coco.jpg" />
+    <None Remove="images\guadeloupe\Specialite\Sorbet_coco.webp" />
+    <None Remove="images\guyane\Guyane.jpg" />
+    <None Remove="images\guyane\guyane2.jpg" />
+    <None Remove="images\guyane\Lieux\Cayenne1.jpg" />
+    <None Remove="images\guyane\Lieux\Cayenne2.jpg" />
+    <None Remove="images\guyane\Lieux\Cayenne3.jpg" />
+    <None Remove="images\guyane\Lieux\Spatial1.jpg" />
+    <None Remove="images\guyane\Lieux\Spatial2.jpg" />
+    <None Remove="images\guyane\Lieux\Spatial3.jpg" />
+    <None Remove="images\guyane\Lieux\iles1.jpg" />
+    <None Remove="images\guyane\Lieux\iles2.jpg" />
+    <None Remove="images\guyane\Lieux\iles3.jpg" />
+    <None Remove="images\guyane\Objets\Bagnard1.jpeg" />
+    <None Remove="images\guyane\Objets\Bagnard2.jpeg" />
+    <None Remove="images\guyane\Objets\Plateau1.jpg" />
+    <None Remove="images\guyane\Objets\Plateau2.jpg" />
+    <None Remove="images\guyane\Objets\Vanneries1.jpg" />
+    <None Remove="images\guyane\Objets\Vanneries2.jpg" />
+    <None Remove="images\guyane\Specialite\bami.jpg" />
+    <None Remove="images\guyane\Specialite\bouillon d%27awara.jpg" />
+    <None Remove="images\guyane\Specialite\bouillon d%27awara2.jpg" />
+    <None Remove="images\guyane\Specialite\nassi.jpg" />
+    <None Remove="images\guyane\Specialite\wassai-couac.jpg" />
+    <None Remove="images\guyane\Specialite\wassai et le couac.jpeg" />
+    <None Remove="images\Haut-de-France\Haut-de-France.jpg" />
+    <None Remove="images\Haut-de-France\Hauts-de-France.-departement.png" />
+    <None Remove="images\Haut-de-France\Lieux\Crotoy1.jpg" />
+    <None Remove="images\Haut-de-France\Lieux\Crotoy2.jpg" />
+    <None Remove="images\Haut-de-France\Lieux\Crotoy3.jpg" />
+    <None Remove="images\Haut-de-France\Lieux\Gerberoy1.jpg" />
+    <None Remove="images\Haut-de-France\Lieux\Gerberoy2.jpg" />
+    <None Remove="images\Haut-de-France\Lieux\Gerberoy3.jpg" />
+    <None Remove="images\Haut-de-France\Lieux\Pierrefonds1.jpg" />
+    <None Remove="images\Haut-de-France\Lieux\Pierrefonds2.jpg" />
+    <None Remove="images\Haut-de-France\Lieux\Pierrefonds3.jpg" />
+    <None Remove="images\Haut-de-France\Objets\Couteau1.png" />
+    <None Remove="images\Haut-de-France\Objets\Couteau2.jpg" />
+    <None Remove="images\Haut-de-France\Objets\Galets1.jpg" />
+    <None Remove="images\Haut-de-France\Objets\Galets2.jpg" />
+    <None Remove="images\Haut-de-France\Objets\Lampe1.png" />
+    <None Remove="images\Haut-de-France\Objets\Lampe2.png" />
+    <None Remove="images\Haut-de-France\Specialite\andouille.jpg" />
+    <None Remove="images\Haut-de-France\Specialite\andouillette.jpeg" />
+    <None Remove="images\Haut-de-France\Specialite\Maroilles.jpg" />
+    <None Remove="images\Haut-de-France\Specialite\maroilles.png" />
+    <None Remove="images\Haut-de-France\Specialite\Ratte_du_touquet.jpg" />
+    <None Remove="images\Haut-de-France\Specialite\Ratte_du_touquet2.jpg" />
+    <None Remove="images\Ile-de-france\Ile-de-france.jpg" />
+    <None Remove="images\Ile-de-france\Ile-de-France_departement.jpg" />
+    <None Remove="images\Ile-de-france\Lieux\Chateau_de_Versailles1.jpg" />
+    <None Remove="images\Ile-de-france\Lieux\Chateau_de_Versailles2.jpg" />
+    <None Remove="images\Ile-de-france\Lieux\Chateau_de_Versailles3.png" />
+    <None Remove="images\Ile-de-france\Lieux\Saint-Denis1.jpg" />
+    <None Remove="images\Ile-de-france\Lieux\Saint-Denis2.jpg" />
+    <None Remove="images\Ile-de-france\Lieux\Saint-Denis3.png" />
+    <None Remove="images\Ile-de-france\Lieux\Tour_Eiffel1.jpg" />
+    <None Remove="images\Ile-de-france\Lieux\Tour_Eiffel2.jpg" />
+    <None Remove="images\Ile-de-france\Lieux\Tour_Eiffel3.jpg" />
+    <None Remove="images\Ile-de-france\Objets\Béret1.jpg" />
+    <None Remove="images\Ile-de-france\Objets\Béret2.jpg" />
+    <None Remove="images\Ile-de-france\Objets\Marinière1.png" />
+    <None Remove="images\Ile-de-france\Objets\Marinière2.jpg" />
+    <None Remove="images\Ile-de-france\Objets\Parapluie1.jpg" />
+    <None Remove="images\Ile-de-france\Objets\Parapluie2.jpg" />
+    <None Remove="images\Ile-de-france\Specialite\gratinee-des-halles.jpeg" />
+    <None Remove="images\Ile-de-france\Specialite\gratinee-halles.jpg" />
+    <None Remove="images\Ile-de-france\Specialite\l-amandine.jpg" />
+    <None Remove="images\Ile-de-france\Specialite\potage-saint-germain.jpg" />
+    <None Remove="images\Ile-de-france\Specialite\Potage_Saint-Germain.jpg" />
+    <None Remove="images\Ile-de-france\Specialite\tartelettes_amandines.jpg" />
+    <None Remove="images\logo\auvergne-rhone-alpe3.jpg" />
+    <None Remove="images\logo\Bourgogne-franche-compte.jpg" />
+    <None Remove="images\logo\bretagne.jpg" />
+    <None Remove="images\logo\Centre-Val-de-Loire.jpg" />
+    <None Remove="images\logo\corce.png" />
+    <None Remove="images\logo\Grand_Est.png" />
+    <None Remove="images\logo\guadeloupe.gif" />
+    <None Remove="images\logo\guyane.png" />
+    <None Remove="images\logo\Haut-de-France.jpg" />
+    <None Remove="images\logo\ile-de-france.png" />
+    <None Remove="images\logo\martinique.jpg" />
+    <None Remove="images\logo\normandie.jpg" />
+    <None Remove="images\logo\nouvelle-aquitaine.jpg" />
+    <None Remove="images\logo\Nouvelle-caledonie.jpg" />
+    <None Remove="images\logo\occitanie.png" />
+    <None Remove="images\logo\Pays-de-la-Loire.png" />
+    <None Remove="images\logo\provence-alpes-cote-d%27azur.jpg" />
+    <None Remove="images\logo\Reunion.jpg" />
+    <None Remove="images\martinique\Lieux\Anses-d_Arlet1.jpg" />
+    <None Remove="images\martinique\Lieux\Anses-d_Arlet2.jpg" />
+    <None Remove="images\martinique\Lieux\Anses-d_Arlet3.jpg" />
+    <None Remove="images\martinique\Lieux\Fort-de-France1.jpg" />
+    <None Remove="images\martinique\Lieux\Fort-de-France2.jpg" />
+    <None Remove="images\martinique\Lieux\Fort-de-France3.jpg" />
+    <None Remove="images\martinique\Lieux\Sainte-Anne1.jpg" />
+    <None Remove="images\martinique\Lieux\Sainte-Anne2.jpg" />
+    <None Remove="images\martinique\Lieux\Sainte-Anne3.jpg" />
+    <None Remove="images\martinique\martinique.jpg" />
+    <None Remove="images\martinique\martinique2.webp" />
+    <None Remove="images\martinique\Objets\Boislele1.jpg" />
+    <None Remove="images\martinique\Objets\Boislele2.jpg" />
+    <None Remove="images\martinique\Objets\Cabas1.png" />
+    <None Remove="images\martinique\Objets\Cabas2.png" />
+    <None Remove="images\martinique\Objets\Savons1.jpg" />
+    <None Remove="images\martinique\Objets\Savons2.jpg" />
+    <None Remove="images\martinique\Specialite\feroce-davocat.jpg" />
+    <None Remove="images\martinique\Specialite\feroce-davocat2.jpg" />
+    <None Remove="images\martinique\Specialite\Ti nain morue.jpg" />
+    <None Remove="images\martinique\Specialite\ti-nain-morue.jpeg" />
+    <None Remove="images\martinique\Specialite\trempage-martiniquais.jpg" />
+    <None Remove="images\martinique\Specialite\trempage-martinique.jpg" />
+    <None Remove="images\Normandie\Lieux\Cote_Fleurie1.jpg" />
+    <None Remove="images\Normandie\Lieux\Cote_Fleurie2.jpg" />
+    <None Remove="images\Normandie\Lieux\Cote_Fleurie3.jpg" />
+    <None Remove="images\Normandie\Lieux\Falaises_D-Etretat1.jpg" />
+    <None Remove="images\Normandie\Lieux\Falaises_D-Etretat2.jpg" />
+    <None Remove="images\Normandie\Lieux\Falaises_D-Etretat3.jpg" />
+    <None Remove="images\Normandie\Lieux\Saint_Michel1.jpg" />
+    <None Remove="images\Normandie\Lieux\Saint_Michel2.jpg" />
+    <None Remove="images\Normandie\Lieux\Saint_Michel3.jpg" />
+    <None Remove="images\Normandie\Normandie.jpg" />
+    <None Remove="images\Normandie\Normandie_departement.png" />
+    <None Remove="images\Normandie\Objets\Assiette1.jpg" />
+    <None Remove="images\Normandie\Objets\Assiette2.jpg" />
+    <None Remove="images\Normandie\Objets\SACOCHE1.jpg" />
+    <None Remove="images\Normandie\Objets\SACOCHE2.jpg" />
+    <None Remove="images\Normandie\Objets\Sifflet1.jpg" />
+    <None Remove="images\Normandie\Objets\Sifflet2.jpg" />
+    <None Remove="images\Normandie\Specialite\camembert.jpg" />
+    <None Remove="images\Normandie\Specialite\Camembert2.jpg" />
+    <None Remove="images\Normandie\Specialite\escalopes-de-dinde.jpg" />
+    <None Remove="images\Normandie\Specialite\escalopes_de_poulet.jpg" />
+    <None Remove="images\Normandie\Specialite\Le_calvados.jpg" />
+    <None Remove="images\Normandie\Specialite\Le_calvados2.jpg" />
+    <None Remove="images\Nouvelle-Aquitaine\Lieux\eglise_Saint-Jean-Baptiste_a_Saint-Jean-de-Luz2.jpg" />
+    <None Remove="images\Nouvelle-Aquitaine\Lieux\eglise_Saint-Jean-Baptiste_a_Saint-Jean-de-Luz3.jpg" />
+    <None Remove="images\Nouvelle-Aquitaine\Lieux\eglise_Saint-Jean-Baptiste_a_Saint-Jean-de-Luz1.jpg" />
+    <None Remove="images\Nouvelle-Aquitaine\Lieux\Les_tours_du_port_de_La_Rochelle1.jpg" />
+    <None Remove="images\Nouvelle-Aquitaine\Lieux\Les_tours_du_port_de_La_Rochelle2.jpg" />
+    <None Remove="images\Nouvelle-Aquitaine\Lieux\Les_tours_du_port_de_La_Rochelle3.jpg" />
+    <None Remove="images\Nouvelle-Aquitaine\Lieux\eglise_Notre-Dame-la-Grande1.jpg" />
+    <None Remove="images\Nouvelle-Aquitaine\Lieux\eglise_Notre-Dame-la-Grande2.jpg" />
+    <None Remove="images\Nouvelle-Aquitaine\Lieux\eglise_Notre-Dame-la-Grande3.jpg" />
+    <None Remove="images\Nouvelle-Aquitaine\nouvelle-aquitaine-departement.png" />
+    <None Remove="images\Nouvelle-Aquitaine\nouvelle-aquitaine.jpg" />
+    <None Remove="images\Nouvelle-Aquitaine\Objets\Les_charentaises.jpg" />
+    <None Remove="images\Nouvelle-Aquitaine\Objets\Les_charentaises2.jpg" />
+    <None Remove="images\Nouvelle-Aquitaine\Objets\Porcelaine.jpg" />
+    <None Remove="images\Nouvelle-Aquitaine\Objets\Porcelaine2.jpg" />
+    <None Remove="images\Nouvelle-Aquitaine\Objets\Tapisserie.jpg" />
+    <None Remove="images\Nouvelle-Aquitaine\Objets\Tapisserie2.jpg" />
+    <None Remove="images\Nouvelle-Aquitaine\Specialite\axoa-de-veau.jpeg" />
+    <None Remove="images\Nouvelle-Aquitaine\Specialite\axoa-de-veau1.jpeg" />
+    <None Remove="images\Nouvelle-Aquitaine\Specialite\canneles1.jpg" />
+    <None Remove="images\Nouvelle-Aquitaine\Specialite\Canneles.jpeg" />
+    <None Remove="images\Nouvelle-Aquitaine\Specialite\fondue-au-vin-rouge.jpg" />
+    <None Remove="images\Nouvelle-Aquitaine\Specialite\fondue-vigneronne-vin-rouge.jpg" />
+    <None Remove="images\Nouvelle-caledonie\Lieux\L%27ile_Pins1.jpg" />
+    <None Remove="images\Nouvelle-caledonie\Lieux\L%27ile_Pins2.jpg" />
+    <None Remove="images\Nouvelle-caledonie\Lieux\L%27ile_Pins3.jpg" />
+    <None Remove="images\Nouvelle-caledonie\Lieux\Lifou1.jpg" />
+    <None Remove="images\Nouvelle-caledonie\Lieux\Lifou2.jpg" />
+    <None Remove="images\Nouvelle-caledonie\Lieux\Lifou3.jpg" />
+    <None Remove="images\Nouvelle-caledonie\Lieux\Noumea1.jpg" />
+    <None Remove="images\Nouvelle-caledonie\Lieux\Noumea2.jpg" />
+    <None Remove="images\Nouvelle-caledonie\Lieux\Noumea3.jpg" />
+    <None Remove="images\Nouvelle-caledonie\Nouvelle-caledonie.jpg" />
+    <None Remove="images\Nouvelle-caledonie\Nouvelle-caledonie2.jpg" />
+    <None Remove="images\Nouvelle-caledonie\Objets\Bijoux1.jpg" />
+    <None Remove="images\Nouvelle-caledonie\Objets\Bijoux2.jpg" />
+    <None Remove="images\Nouvelle-caledonie\Objets\Bois1.jpg" />
+    <None Remove="images\Nouvelle-caledonie\Objets\Bois2.jpg" />
+    <None Remove="images\Nouvelle-caledonie\Objets\Sculptures1.jpg" />
+    <None Remove="images\Nouvelle-caledonie\Objets\Sculptures2.jpg" />
+    <None Remove="images\Nouvelle-caledonie\Specialite\bougna.jpg" />
+    <None Remove="images\Nouvelle-caledonie\Specialite\crevette.jpg" />
+    <None Remove="images\Nouvelle-caledonie\Specialite\crevette2.jpg" />
+    <None Remove="images\Nouvelle-caledonie\Specialite\escargot2.jpg" />
+    <None Remove="images\Nouvelle-caledonie\Specialite\Escargots.jpg" />
+    <None Remove="images\Nouvelle-caledonie\Specialite\Le_Bougna.jpg" />
+    <None Remove="images\Occitanie\Lieux\La_cite_de_Carcassonne.jpg" />
+    <None Remove="images\Occitanie\Lieux\La_cite_de_Carcassonne2.jpg" />
+    <None Remove="images\Occitanie\Lieux\La_cite_de_Carcassonne3.jpg" />
+    <None Remove="images\Occitanie\Lieux\Les_joutes_de_Sete1.jpg" />
+    <None Remove="images\Occitanie\Lieux\Les_joutes_de_Sete2.jpg" />
+    <None Remove="images\Occitanie\Lieux\Les_joutes_de_Sete3.jpg" />
+    <None Remove="images\Occitanie\Lieux\Le_Mont_Canigo1.jpg" />
+    <None Remove="images\Occitanie\Lieux\Le_Mont_Canigo2.jpg" />
+    <None Remove="images\Occitanie\Lieux\Le_Mont_Canigo3.jpg" />
+    <None Remove="images\Occitanie\Objets\Artisan_Pastelier.jpg" />
+    <None Remove="images\Occitanie\Objets\Artisan_Pastelier2.jpg" />
+    <None Remove="images\Occitanie\Objets\Les_toile.jpg" />
+    <None Remove="images\Occitanie\Objets\Les_toile2.jpg" />
+    <None Remove="images\Occitanie\Objets\P%27tite_Occitanie.jpg" />
+    <None Remove="images\Occitanie\Objets\P%27tite_Occitanie2.jpg" />
+    <None Remove="images\Occitanie\occitanie-departement.png" />
+    <None Remove="images\Occitanie\occitanie.jpg" />
+    <None Remove="images\Occitanie\Specialite\aligo.jpg" />
+    <None Remove="images\Occitanie\Specialite\brandade-de-marrue-.jpeg" />
+    <None Remove="images\Occitanie\Specialite\brandade-de-morue-puree-de-pommes-de-terre.jpg" />
+    <None Remove="images\Occitanie\Specialite\cassoulet.jpg" />
+    <None Remove="images\Occitanie\Specialite\cassoulet1.jpg" />
+    <None Remove="images\Occitanie\Specialite\l%27aligot.webp" />
+    <None Remove="images\Pays-de-la-loire\Lieux\Angers1.jpg" />
+    <None Remove="images\Pays-de-la-loire\Lieux\Angers2.jpg" />
+    <None Remove="images\Pays-de-la-loire\Lieux\Angers3.png" />
+    <None Remove="images\Pays-de-la-loire\Lieux\Fontevraud1.jpg" />
+    <None Remove="images\Pays-de-la-loire\Lieux\Fontevraud2.jpg" />
+    <None Remove="images\Pays-de-la-loire\Lieux\Fontevraud3.png" />
+    <None Remove="images\Pays-de-la-loire\Lieux\Mans1.jpg" />
+    <None Remove="images\Pays-de-la-loire\Lieux\Mans2.jpg" />
+    <None Remove="images\Pays-de-la-loire\Lieux\Mans3.png" />
+    <None Remove="images\Pays-de-la-loire\Objets\Savonnerie1.jpg" />
+    <None Remove="images\Pays-de-la-loire\Objets\Savonnerie2.jpg" />
+    <None Remove="images\Pays-de-la-loire\Objets\Stylos1.png" />
+    <None Remove="images\Pays-de-la-loire\Objets\Stylos2.jpg" />
+    <None Remove="images\Pays-de-la-loire\Objets\Velo1.jpg" />
+    <None Remove="images\Pays-de-la-loire\Objets\Velo2.jpg" />
+    <None Remove="images\Pays-de-la-loire\Pays-de-la-Loire-departement.png" />
+    <None Remove="images\Pays-de-la-loire\Pays-de-la-Loire.png" />
+    <None Remove="images\Pays-de-la-loire\Specialite\brioche-vendeenne.jpg" />
+    <None Remove="images\Pays-de-la-loire\Specialite\brioche-vendeenne2.jpg" />
+    <None Remove="images\Pays-de-la-loire\Specialite\chaudree-vendeenne.jpg" />
+    <None Remove="images\Pays-de-la-loire\Specialite\Chaudree_traditionnelle.jpg" />
+    <None Remove="images\Pays-de-la-loire\Specialite\pate-de-lapin.jpg" />
+    <None Remove="images\Pays-de-la-loire\Specialite\pate-de-lapin2.jpg" />
+    <None Remove="images\Provence-Alpes-Cote-d%27Azur\Lieux\Arles1.jpg" />
+    <None Remove="images\Provence-Alpes-Cote-d%27Azur\Lieux\Arles2.jpg" />
+    <None Remove="images\Provence-Alpes-Cote-d%27Azur\Lieux\Arles3.png" />
+    <None Remove="images\Provence-Alpes-Cote-d%27Azur\Lieux\Avignon1.jpg" />
+    <None Remove="images\Provence-Alpes-Cote-d%27Azur\Lieux\Avignon2.jpg" />
+    <None Remove="images\Provence-Alpes-Cote-d%27Azur\Lieux\Avignon3.jpg" />
+    <None Remove="images\Provence-Alpes-Cote-d%27Azur\Lieux\Marseille1.jpg" />
+    <None Remove="images\Provence-Alpes-Cote-d%27Azur\Lieux\Marseille2.jpg" />
+    <None Remove="images\Provence-Alpes-Cote-d%27Azur\Lieux\Marseille3.gif" />
+    <None Remove="images\Provence-Alpes-Cote-d%27Azur\Objets\Jouets_du_Queyras_1.jpg" />
+    <None Remove="images\Provence-Alpes-Cote-d%27Azur\Objets\Jouets_du_Queyras_2.jpg" />
+    <None Remove="images\Provence-Alpes-Cote-d%27Azur\Objets\Poteries_1.jpg" />
+    <None Remove="images\Provence-Alpes-Cote-d%27Azur\Objets\Poteries_2.jpg" />
+    <None Remove="images\Provence-Alpes-Cote-d%27Azur\Objets\Verrerie_1.jpg" />
+    <None Remove="images\Provence-Alpes-Cote-d%27Azur\Objets\Verrerie_2.jpg" />
+    <None Remove="images\Provence-Alpes-Cote-d%27Azur\provence-alpe-cote-d-azur.jpg" />
+    <None Remove="images\Provence-Alpes-Cote-d%27Azur\provence-alpes-cote-d-azur-departement.png" />
+    <None Remove="images\Provence-Alpes-Cote-d%27Azur\Specialite\aioli.jpg" />
+    <None Remove="images\Provence-Alpes-Cote-d%27Azur\Specialite\aoili.webp" />
+    <None Remove="images\Provence-Alpes-Cote-d%27Azur\Specialite\fougasse.jpg" />
+    <None Remove="images\Provence-Alpes-Cote-d%27Azur\Specialite\fougasse1.jpg" />
+    <None Remove="images\Provence-Alpes-Cote-d%27Azur\Specialite\La-sacca.jpg" />
+    <None Remove="images\Provence-Alpes-Cote-d%27Azur\Specialite\La-sacca2.webp" />
+    <None Remove="images\Reunion\Lieux\Grand_Anse1.jpg" />
+    <None Remove="images\Reunion\Lieux\Grand_Anse2.jpg" />
+    <None Remove="images\Reunion\Lieux\Grand_Anse3.jpg" />
+    <None Remove="images\Reunion\Lieux\La_cascade1.jpg" />
+    <None Remove="images\Reunion\Lieux\La_cascade2.jpg" />
+    <None Remove="images\Reunion\Lieux\La_cascade3.jpg" />
+    <None Remove="images\Reunion\Lieux\Piton_de_La_fournaise1.jpg" />
+    <None Remove="images\Reunion\Lieux\Piton_de_La_fournaise2.jpg" />
+    <None Remove="images\Reunion\Lieux\Piton_de_La_fournaise3.jpg" />
+    <None Remove="images\Reunion\Objets\Kayamb1.jpg" />
+    <None Remove="images\Reunion\Objets\Kayamb2.jpg" />
+    <None Remove="images\Reunion\Objets\Pierre1.jpg" />
+    <None Remove="images\Reunion\Objets\Pierre2.jpg" />
+    <None Remove="images\Reunion\Objets\Sabre1.jpg" />
+    <None Remove="images\Reunion\Objets\Sabre2.jpg" />
+    <None Remove="images\Reunion\Reunion.jpg" />
+    <None Remove="images\Reunion\Reunion2.jpg" />
+    <None Remove="images\Reunion\Specialite\bonbon-piment-samoussas.jpg" />
+    <None Remove="images\Reunion\Specialite\salade-de-palmiste.jpg" />
+    <None Remove="images\Reunion\Specialite\salade-de-palmiste2.jpg" />
+    <None Remove="images\Reunion\Specialite\samoussa.jpg" />
+    <None Remove="images\Reunion\Specialite\Sarcives.jpg" />
+    <None Remove="images\Reunion\Specialite\sarcives2.jpg" />
+    <None Remove="images\Utilisateurs\adrien.jpg" />
+    <None Remove="images\Utilisateurs\nathan.jpg" />
+    <None Remove="images\Utilisateurs\patrick.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="images\Autre\account-plus.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Autre\CarteFrance.PNG">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Autre\croix.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Autre\logo-france.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Autre\Menu.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Autre\modifier.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Autre\moins.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Autre\Paramètre.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Autre\photo-de-profil.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Autre\plus.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Autre\power.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Autre\Retour.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Autre\valide.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Auvergne-Rhone-Alpe\auvergne-rhone-alpes-region-departements.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Auvergne-Rhone-Alpe\Auvergne-Rhone-Alpes.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Auvergne-Rhone-Alpe\Lieux\Le_pal1.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Auvergne-Rhone-Alpe\Lieux\Le_pal2.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Auvergne-Rhone-Alpe\Lieux\Le_pal3.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Auvergne-Rhone-Alpe\Lieux\Panoramique_des_Domes1.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Auvergne-Rhone-Alpe\Lieux\Panoramique_des_Domes2.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Auvergne-Rhone-Alpe\Lieux\Panoramique_des_Domes3.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Auvergne-Rhone-Alpe\Lieux\vieux-lyon-map.jfif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Auvergne-Rhone-Alpe\Lieux\vieux-lyon.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Auvergne-Rhone-Alpe\Lieux\vieux-lyon2.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Auvergne-Rhone-Alpe\Objets\briquet.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Auvergne-Rhone-Alpe\Objets\briquet2.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Auvergne-Rhone-Alpe\Objets\Couteaux.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Auvergne-Rhone-Alpe\Objets\Couteaux2.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Auvergne-Rhone-Alpe\Objets\mamie-mesure.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Auvergne-Rhone-Alpe\Objets\mamie-mesure2.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Auvergne-Rhone-Alpe\specialite\cuisses-de-grenouille1.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Auvergne-Rhone-Alpe\specialite\cuisses-de-grenouilles.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Auvergne-Rhone-Alpe\specialite\poulet-de-bresse.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Auvergne-Rhone-Alpe\specialite\poulet.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Auvergne-Rhone-Alpe\specialite\raviole.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Auvergne-Rhone-Alpe\specialite\raviole2.jpeg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Bourgogne-franche-compte\Bourgogne-franche-compte-departement.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Bourgogne-franche-compte\Bourgogne-franche-compte.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Bourgogne-franche-compte\Lieux\Noyers-sur-Serein1.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Bourgogne-franche-compte\Lieux\Noyers-sur-Serein2.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Bourgogne-franche-compte\Lieux\Noyers-sur-Serein3.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Bourgogne-franche-compte\Lieux\Semur-en-Brionnais1.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Bourgogne-franche-compte\Lieux\Semur-en-Brionnais2.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Bourgogne-franche-compte\Lieux\Semur-en-Brionnais3.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Bourgogne-franche-compte\Lieux\Vezelay1.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Bourgogne-franche-compte\Lieux\Vezelay2.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Bourgogne-franche-compte\Lieux\Vezelay3.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Bourgogne-franche-compte\Objets\Horlogerie_1.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Bourgogne-franche-compte\Objets\Horlogerie_2.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Bourgogne-franche-compte\Objets\La_pipe.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Bourgogne-franche-compte\Objets\La_pipe2.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Bourgogne-franche-compte\Objets\Savons_Bourgogne_1.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Bourgogne-franche-compte\Objets\Savons_Bourgogne_2.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Bourgogne-franche-compte\Specialite\andouillette-chablis.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Bourgogne-franche-compte\Specialite\au-bon-laboureur.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Bourgogne-franche-compte\Specialite\escargot.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Bourgogne-franche-compte\Specialite\escargot1.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Bourgogne-franche-compte\Specialite\Poularde_aux_morilles_002.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Bourgogne-franche-compte\Specialite\poulet-aux-morilles-georges-blanc.jpeg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Bretagne\bretagne-departements.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Bretagne\bretagne.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Bretagne\Lieux\GRANIT_ROSE1.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Bretagne\Lieux\GRANIT_ROSE2.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Bretagne\Lieux\GRANIT_ROSE3.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Bretagne\Lieux\LA_POINTE_SAINT-MATHIEU1.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Bretagne\Lieux\LA_POINTE_SAINT-MATHIEU2.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Bretagne\Lieux\LA_POINTE_SAINT-MATHIEU3.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Bretagne\Lieux\SAINT-MALO1.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Bretagne\Lieux\SAINT-MALO2.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Bretagne\Lieux\SAINT-MALO3.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Bretagne\Objets\barzhel.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Bretagne\Objets\barzhel2.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Bretagne\Objets\Tempete de l Ouest.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Bretagne\Objets\Tempete de l Ouest2.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Bretagne\Objets\tipi.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Bretagne\Objets\tipi2.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Bretagne\Specialite\crepes.jpeg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Bretagne\Specialite\crepes.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Bretagne\Specialite\far-breton.jpeg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Bretagne\Specialite\far-breton.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Bretagne\Specialite\kouign_amann.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Bretagne\Specialite\kouign_amann1.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Centre-Val-de-Loire\Centre-Val-de-Loire.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Centre-Val-de-Loire\centre-val-loire-departement.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Centre-Val-de-Loire\Lieux\Azay_le_Rideau1.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Centre-Val-de-Loire\Lieux\Azay_le_Rideau2.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Centre-Val-de-Loire\Lieux\Azay_le_Rideau3.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Centre-Val-de-Loire\Lieux\Chateaudun1.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Centre-Val-de-Loire\Lieux\Chateaudun2.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Centre-Val-de-Loire\Lieux\Chateaudun3.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Centre-Val-de-Loire\Lieux\Maray1.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Centre-Val-de-Loire\Lieux\Maray2.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Centre-Val-de-Loire\Lieux\Maray3.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Centre-Val-de-Loire\Objets\boutique-orleans-val-de-loire-tourisme.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Centre-Val-de-Loire\Objets\boutique-orleans-val-de-loire-tourisme2.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Centre-Val-de-Loire\Objets\CABANE-A-JOUETS.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Centre-Val-de-Loire\Objets\CABANE-A-JOUETS.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Centre-Val-de-Loire\Objets\librairie.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Centre-Val-de-Loire\Objets\librarie.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Centre-Val-de-Loire\Specialite\pithiviers.jpeg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Centre-Val-de-Loire\Specialite\pithiviers.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Centre-Val-de-Loire\Specialite\sucre d'orge de tours.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Centre-Val-de-Loire\Specialite\sucre d'orge de tours1.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Centre-Val-de-Loire\Specialite\Tarte_tatin.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Centre-Val-de-Loire\Specialite\Tarte_tatin2.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Corse\corce-departement.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Corse\corce.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Corse\Lieux\Bastia1.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Corse\Lieux\Bastia2.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Corse\Lieux\Bastia3.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Corse\Lieux\Bonifacio1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Corse\Lieux\Bonifacio2.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Corse\Lieux\Bonifacio3.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Corse\Lieux\Calvi1.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Corse\Lieux\Calvi2.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Corse\Lieux\Calvi3.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Corse\Objets\Corail rouge 1.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Corse\Objets\Corail rouge 2.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Corse\Objets\Couteaux corse 1.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Corse\Objets\Couteaux corse 2.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Corse\Objets\oeil-sainte-lucie 1.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Corse\Objets\oeil-sainte-lucie 2.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Corse\Specialite\beignetbrocciu.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Corse\Specialite\beignets-brocciu.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Corse\Specialite\fiadone.jpeg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Corse\Specialite\fiadone.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Corse\Specialite\tarte-aux-herbes-corse.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Corse\Specialite\tartelettes_feta_herbes_4.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Grand-Est\Grand-Est-departement.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Grand-Est\Grand-Est.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Grand-Est\Lieux\Colmar1.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Grand-Est\Lieux\Colmar2.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Grand-Est\Lieux\Colmar3.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Grand-Est\Lieux\Gerardmer1.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Grand-Est\Lieux\Gerardmer2.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Grand-Est\Lieux\Gerardmer3.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Grand-Est\Lieux\Vins1.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Grand-Est\Lieux\Vins2.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Grand-Est\Lieux\Vins3.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Grand-Est\Objets\1secondtemps.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Grand-Est\Objets\1secondtempsjfif.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Grand-Est\Objets\3 petit point2.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Grand-Est\Objets\3 petit points.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Grand-Est\Objets\concept store.webp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Grand-Est\Objets\concept store2.webp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Grand-Est\Specialite\Boudin.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Grand-Est\Specialite\boudin2.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Grand-Est\Specialite\Bouneschlupp.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Grand-Est\Specialite\bouneschlupp.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Grand-Est\Specialite\choucroute.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Grand-Est\Specialite\Choucroute.webp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\guadeloupe\guadeloupe.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\guadeloupe\guadeloupe2.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+	<Content Include="images\guadeloupe\Lieux\Cul-de-Sac1.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+	<Content Include="images\guadeloupe\Lieux\Cul-de-Sac2.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\guadeloupe\Lieux\Cul-de-Sac3.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+	<Content Include="images\guadeloupe\Lieux\Porte_d'Enfer1.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+	<Content Include="images\guadeloupe\Lieux\Porte_d'Enfer2.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+	<Content Include="images\guadeloupe\Lieux\Porte_d'Enfer3.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+	<Content Include="images\guadeloupe\Lieux\Soufriere1.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+	<Content Include="images\guadeloupe\Lieux\Soufriere2.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+	<Content Include="images\guadeloupe\Lieux\Soufriere3.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+	<Content Include="images\guadeloupe\Objets\Calebasse1.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\guadeloupe\Objets\Calebasse2.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\guadeloupe\Objets\Fleurs1.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\guadeloupe\Objets\Fleurs2.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\guadeloupe\Objets\Madras1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\guadeloupe\Objets\Madras2.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\guadeloupe\Specialite\accras.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\guadeloupe\Specialite\Accras.webp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\guadeloupe\Specialite\punch.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\guadeloupe\Specialite\punchs.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\guadeloupe\Specialite\sorbet-coco.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\guadeloupe\Specialite\Sorbet_coco.webp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\guyane\Guyane.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\guyane\guyane2.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\guyane\Lieux\Cayenne1.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\guyane\Lieux\Cayenne2.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\guyane\Lieux\Cayenne3.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\guyane\Lieux\Spatial1.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\guyane\Lieux\Spatial2.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\guyane\Lieux\Spatial3.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\guyane\Lieux\iles1.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\guyane\Lieux\iles2.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\guyane\Lieux\iles3.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\guyane\Objets\Bagnard1.jpeg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\guyane\Objets\Bagnard2.jpeg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\guyane\Objets\Plateau1.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\guyane\Objets\Plateau2.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\guyane\Objets\Vanneries1.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\guyane\Objets\Vanneries2.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\guyane\Specialite\bami.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\guyane\Specialite\bouillon d'awara.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\guyane\Specialite\bouillon d'awara2.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\guyane\Specialite\nassi.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\guyane\Specialite\wassai-couac.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\guyane\Specialite\wassai et le couac.jpeg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Haut-de-France\Haut-de-France.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Haut-de-France\Hauts-de-France.-departement.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Haut-de-France\Lieux\Crotoy1.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Haut-de-France\Lieux\Crotoy2.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Haut-de-France\Lieux\Crotoy3.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Haut-de-France\Lieux\Gerberoy1.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Haut-de-France\Lieux\Gerberoy2.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Haut-de-France\Lieux\Gerberoy3.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Haut-de-France\Lieux\Pierrefonds1.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Haut-de-France\Lieux\Pierrefonds2.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Haut-de-France\Lieux\Pierrefonds3.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Haut-de-France\Objets\Couteau1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Haut-de-France\Objets\Couteau2.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Haut-de-France\Objets\Galets1.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Haut-de-France\Objets\Galets2.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Haut-de-France\Objets\Lampe1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Haut-de-France\Objets\Lampe2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Haut-de-France\Specialite\andouille.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Haut-de-France\Specialite\andouillette.jpeg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Haut-de-France\Specialite\Maroilles.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Haut-de-France\Specialite\maroilles.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Haut-de-France\Specialite\Ratte_du_touquet.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Haut-de-France\Specialite\Ratte_du_touquet2.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Ile-de-france\Ile-de-france.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Ile-de-france\Ile-de-France_departement.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Ile-de-france\Lieux\Chateau_de_Versailles1.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Ile-de-france\Lieux\Chateau_de_Versailles2.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Ile-de-france\Lieux\Chateau_de_Versailles3.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Ile-de-france\Lieux\Saint-Denis1.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Ile-de-france\Lieux\Saint-Denis2.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Ile-de-france\Lieux\Saint-Denis3.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Ile-de-france\Lieux\Tour_Eiffel1.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Ile-de-france\Lieux\Tour_Eiffel2.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Ile-de-france\Lieux\Tour_Eiffel3.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Ile-de-france\Objets\Beret1.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Ile-de-france\Objets\Beret2.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Ile-de-france\Objets\Mariniere1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Ile-de-france\Objets\Mariniere2.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Ile-de-france\Objets\Parapluie1.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Ile-de-france\Objets\Parapluie2.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Ile-de-france\Specialite\gratinee-des-halles.jpeg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Ile-de-france\Specialite\gratinee-halles.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Ile-de-france\Specialite\l-amandine.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Ile-de-france\Specialite\potage-saint-germain.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Ile-de-france\Specialite\Potage_Saint-Germain.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Ile-de-france\Specialite\tartelettes_amandines.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\logo\auvergne-rhone-alpe3.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\logo\Bourgogne-franche-compte.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\logo\bretagne.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\logo\Centre-Val-de-Loire.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\logo\corce.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\logo\Grand_Est.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\logo\guadeloupe.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\logo\guyane.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\logo\Haut-de-France.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\logo\ile-de-france.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\logo\martinique.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\logo\normandie.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\logo\nouvelle-aquitaine.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\logo\Nouvelle-caledonie.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\logo\occitanie.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\logo\Pays-de-la-Loire.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\logo\provence-alpes-cote-d'azur.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\logo\Reunion.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\martinique\Lieux\Anses-d_Arlet1.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\martinique\Lieux\Anses-d_Arlet2.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\martinique\Lieux\Anses-d_Arlet3.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\martinique\Lieux\Fort-de-France1.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\martinique\Lieux\Fort-de-France2.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\martinique\Lieux\Fort-de-France3.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\martinique\Lieux\Sainte-Anne1.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\martinique\Lieux\Sainte-Anne2.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\martinique\Lieux\Sainte-Anne3.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\martinique\martinique.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\martinique\martinique2.webp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\martinique\Objets\Boislele1.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\martinique\Objets\Boislele2.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\martinique\Objets\Cabas1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\martinique\Objets\Cabas2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\martinique\Objets\Savons1.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\martinique\Objets\Savons2.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\martinique\Specialite\feroce-davocat.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\martinique\Specialite\feroce-davocat2.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\martinique\Specialite\Ti nain morue.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\martinique\Specialite\ti-nain-morue.jpeg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\martinique\Specialite\trempage-martiniquais.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\martinique\Specialite\trempage-martinique.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Normandie\Lieux\Cote_Fleurie1.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Normandie\Lieux\Cote_Fleurie2.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Normandie\Lieux\Cote_Fleurie3.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Normandie\Lieux\Falaises_D-Etretat1.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Normandie\Lieux\Falaises_D-Etretat2.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Normandie\Lieux\Falaises_D-Etretat3.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Normandie\Lieux\Saint_Michel1.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Normandie\Lieux\Saint_Michel2.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Normandie\Lieux\Saint_Michel3.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Normandie\Normandie.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Normandie\Normandie_departement.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Normandie\Objets\Assiette1.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Normandie\Objets\Assiette2.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Normandie\Objets\SACOCHE1.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Normandie\Objets\SACOCHE2.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Normandie\Objets\Sifflet1.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Normandie\Objets\Sifflet2.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Normandie\Specialite\camembert.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Normandie\Specialite\Camembert2.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Normandie\Specialite\escalopes-de-dinde.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Normandie\Specialite\escalopes_de_poulet.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Normandie\Specialite\Le_calvados.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Normandie\Specialite\Le_calvados2.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Nouvelle-Aquitaine\Lieux\eglise_Saint-Jean-Baptiste_a_Saint-Jean-de-Luz2.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Nouvelle-Aquitaine\Lieux\eglise_Saint-Jean-Baptiste_a_Saint-Jean-de-Luz3.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Nouvelle-Aquitaine\Lieux\eglise_Saint-Jean-Baptiste_a_Saint-Jean-de-Luz1.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Nouvelle-Aquitaine\Lieux\Les_tours_du_port_de_La_Rochelle1.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Nouvelle-Aquitaine\Lieux\Les_tours_du_port_de_La_Rochelle2.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Nouvelle-Aquitaine\Lieux\Les_tours_du_port_de_La_Rochelle3.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Nouvelle-Aquitaine\Lieux\eglise_Notre-Dame-la-Grande1.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Nouvelle-Aquitaine\Lieux\eglise_Notre-Dame-la-Grande2.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Nouvelle-Aquitaine\Lieux\eglise_Notre-Dame-la-Grande3.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Nouvelle-Aquitaine\nouvelle-aquitaine-departement.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Nouvelle-Aquitaine\nouvelle-aquitaine.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Nouvelle-Aquitaine\Objets\Les charentaises.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Nouvelle-Aquitaine\Objets\Les charentaises2.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Nouvelle-Aquitaine\Objets\Porcelaine.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Nouvelle-Aquitaine\Objets\Porcelaine2.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Nouvelle-Aquitaine\Objets\Tapisserie.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Nouvelle-Aquitaine\Objets\Tapisserie2.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Nouvelle-Aquitaine\Specialite\axoa-de-veau.jpeg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Nouvelle-Aquitaine\Specialite\axoa-de-veau1.jpeg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Nouvelle-Aquitaine\Specialite\canneles1.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Nouvelle-Aquitaine\Specialite\Canneles.jpeg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Nouvelle-Aquitaine\Specialite\fondue-au-vin-rouge.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Nouvelle-Aquitaine\Specialite\fondue-vigneronne-vin-rouge.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Nouvelle-caledonie\Lieux\L'ile_Pins1.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Nouvelle-caledonie\Lieux\L'ile_Pins2.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Nouvelle-caledonie\Lieux\L'ile_Pins3.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Nouvelle-caledonie\Lieux\Lifou1.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Nouvelle-caledonie\Lieux\Lifou2.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Nouvelle-caledonie\Lieux\Lifou3.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Nouvelle-caledonie\Lieux\Noumea1.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Nouvelle-caledonie\Lieux\Noumea2.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Nouvelle-caledonie\Lieux\Noumea3.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Nouvelle-caledonie\Nouvelle-caledonie.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Nouvelle-caledonie\Nouvelle-caledonie2.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Nouvelle-caledonie\Objets\Bijoux1.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Nouvelle-caledonie\Objets\Bijoux2.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Nouvelle-caledonie\Objets\Bois1.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Nouvelle-caledonie\Objets\Bois2.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Nouvelle-caledonie\Objets\Sculptures1.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Nouvelle-caledonie\Objets\Sculptures2.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Nouvelle-caledonie\Specialite\bougna.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Nouvelle-caledonie\Specialite\crevette.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Nouvelle-caledonie\Specialite\crevette2.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Nouvelle-caledonie\Specialite\escargot2.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Nouvelle-caledonie\Specialite\Escargots.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Nouvelle-caledonie\Specialite\Le_Bougna.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Occitanie\Lieux\La_cite_de_Carcassonne.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Occitanie\Lieux\La_cite_de_Carcassonne2.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Occitanie\Lieux\La_cite_de_Carcassonne3.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Occitanie\Lieux\Les_joutes_de_Sete1.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Occitanie\Lieux\Les_joutes_de_Sete2.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Occitanie\Lieux\Les_joutes_de_Sete3.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Occitanie\Lieux\Le_Mont_Canigo1.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Occitanie\Lieux\Le_Mont_Canigo2.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Occitanie\Lieux\Le_Mont_Canigo3.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Occitanie\Objets\Artisan_Pastelier.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Occitanie\Objets\Artisan_Pastelier2.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Occitanie\Objets\Les_toile.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Occitanie\Objets\Les_toile2.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Occitanie\Objets\P'tite_Occitanie.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Occitanie\Objets\P'tite_Occitanie2.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Occitanie\occitanie-departement.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Occitanie\occitanie.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Occitanie\Specialite\aligo.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Occitanie\Specialite\brandade-de-marrue-.jpeg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Occitanie\Specialite\brandade-de-morue-puree-de-pommes-de-terre.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Occitanie\Specialite\cassoulet.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Occitanie\Specialite\cassoulet1.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Occitanie\Specialite\l'aligot.webp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Pays-de-la-loire\Lieux\Angers1.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Pays-de-la-loire\Lieux\Angers2.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Pays-de-la-loire\Lieux\Angers3.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Pays-de-la-loire\Lieux\Fontevraud1.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Pays-de-la-loire\Lieux\Fontevraud2.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Pays-de-la-loire\Lieux\Fontevraud3.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Pays-de-la-loire\Lieux\Mans1.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Pays-de-la-loire\Lieux\Mans2.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Pays-de-la-loire\Lieux\Mans3.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Pays-de-la-loire\Objets\Savonnerie1.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Pays-de-la-loire\Objets\Savonnerie2.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Pays-de-la-loire\Objets\Stylos1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Pays-de-la-loire\Objets\Stylos2.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Pays-de-la-loire\Objets\Velo1.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Pays-de-la-loire\Objets\Velo2.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Pays-de-la-loire\Pays-de-la-Loire-departement.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Pays-de-la-loire\Pays-de-la-Loire.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Pays-de-la-loire\Specialite\brioche-vendeenne.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Pays-de-la-loire\Specialite\brioche-vendeenne2.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Pays-de-la-loire\Specialite\chaudree-vendeenne.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Pays-de-la-loire\Specialite\Chaudree_traditionnelle.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Pays-de-la-loire\Specialite\pate-de-lapin.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Pays-de-la-loire\Specialite\pate-de-lapin2.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Provence-Alpes-Cote-d'Azur\Lieux\Arles1.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Provence-Alpes-Cote-d'Azur\Lieux\Arles2.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Provence-Alpes-Cote-d'Azur\Lieux\Arles3.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Provence-Alpes-Cote-d'Azur\Lieux\Avignon1.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Provence-Alpes-Cote-d'Azur\Lieux\Avignon2.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Provence-Alpes-Cote-d'Azur\Lieux\Avignon3.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Provence-Alpes-Cote-d'Azur\Lieux\Marseille1.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Provence-Alpes-Cote-d'Azur\Lieux\Marseille2.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Provence-Alpes-Cote-d'Azur\Lieux\Marseille3.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Provence-Alpes-Cote-d'Azur\Objets\Jouets_du_Queyras_1.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Provence-Alpes-Cote-d'Azur\Objets\Jouets_du_Queyras_2.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Provence-Alpes-Cote-d'Azur\Objets\Poteries_1.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Provence-Alpes-Cote-d'Azur\Objets\Poteries_2.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Provence-Alpes-Cote-d'Azur\Objets\Verrerie_1.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Provence-Alpes-Cote-d'Azur\Objets\Verrerie_2.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Provence-Alpes-Cote-d'Azur\provence-alpe-cote-d-azur.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Provence-Alpes-Cote-d'Azur\provence-alpes-cote-d-azur-departement.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Provence-Alpes-Cote-d'Azur\Specialite\aioli.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Provence-Alpes-Cote-d'Azur\Specialite\aoili.webp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Provence-Alpes-Cote-d'Azur\Specialite\fougasse.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Provence-Alpes-Cote-d'Azur\Specialite\fougasse1.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Provence-Alpes-Cote-d'Azur\Specialite\La-sacca.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Provence-Alpes-Cote-d'Azur\Specialite\La-sacca2.webp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Reunion\Lieux\Grand_Anse1.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Reunion\Lieux\Grand_Anse2.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Reunion\Lieux\Grand_Anse3.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Reunion\Lieux\La_cascade1.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Reunion\Lieux\La_cascade2.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Reunion\Lieux\La_cascade3.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Reunion\Lieux\Piton_de_La_fournaise1.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Reunion\Lieux\Piton_de_La_fournaise2.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Reunion\Lieux\Piton_de_La_fournaise3.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Reunion\Objets\Kayamb1.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Reunion\Objets\Kayamb2.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Reunion\Objets\Pierre1.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Reunion\Objets\Pierre2.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Reunion\Objets\Sabre1.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Reunion\Objets\Sabre2.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Reunion\Reunion.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Reunion\Reunion2.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Reunion\Specialite\bonbon-piment-samoussas.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Reunion\Specialite\salade-de-palmiste.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Reunion\Specialite\salade-de-palmiste2.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Reunion\Specialite\samoussa.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Reunion\Specialite\Sarcives.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Reunion\Specialite\sarcives2.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Utilisateurs\adrien.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Utilisateurs\nathan.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Utilisateurs\patrick.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MaterialDesignThemes" Version="4.1.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets" Version="6.0.0-preview.3.21201.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DataContract\DataContract.csproj" />
+    <ProjectReference Include="..\Modele\Modele.csproj" />
+  </ItemGroup>
+
+</Project>
